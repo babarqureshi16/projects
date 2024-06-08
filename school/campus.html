@@ -1,0 +1,172 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="campus.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i>Eduford</a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">home</a></li>
+                <li><a href="campus.html">facalities</a></li>
+                <li><a href="index.html#about">about</a></li>
+                <li><a href="index.html#teacher">teacher</a></li>
+                <li><a href="index.html#course">course</a></li>
+                <li><a href="index.html#review">review</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <div class="fas fa-bars"></div>
+    </header>
+<!-- ---------banner---------- -->
+   <section id="banner">
+         <div class="content">
+            <h1>Our Campuses</h1>
+            <!-- <hr style="width: 350px; height: 5px; background: #FF046f; margin: auto; margin-bottom: 20px; border: #FF046f;"> -->
+            <p>Explore Our Campuses</p>
+            <a href="#camp"><button>View More</button></a>
+         </div>
+   </section>
+<!-- ---------banner---------- -->
+
+<section id="camp" class="campus">
+    <h1>FIND A CAMPUS NEAR YOU</h1>
+    <hr style="width: 350px; height: 5px; background: #C63BFA; margin: auto; margin-bottom: 20px; border:#C63BFA;">
+    <p>Explore Our Campuses Across Pakistan.</p>
+
+    <div class="row">
+
+        <div class="campus-col">
+            <img src="images/london.png">
+            <div class="layer">
+                <h3>DHA</h3>
+            </div>
+        </div>
+         <div class="campus-col">
+            <img src="images/newyork.png">
+            <div class="layer">
+                <h3>PARAGON</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/washington.png">
+            <div class="layer">
+                <h3>KAECHS</h3>
+            </div>
+        </div>
+      
+        </div>
+    </div>
+    <div class="row">
+        <div class="campus-col">
+            <img src="images/camp1.jpeg">
+            <div class="layer">
+                <h3>GULSHAN</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/camp3.jpeg">
+            <div class="layer">
+                <h3>E-11</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/camp5.jpeg">
+            <div class="layer">
+                <h3>JAUHAR</h3>
+            </div>
+    </div>
+</section>
+
+
+
+<footer class="footer" id="foot">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Campuses</h4>
+                <ul>
+                    <li><a href="campus.html">Paragon campus</a></li>
+                    <li><a href="campus.html">KAECHS campus</a></li>
+                    <li><a href="campus.html">DHA campus</a></li>
+                    <li><a href="campus.html">E-11 campus</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">Admission Procedure</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="#">Examination</a></li>
+                    <li><a href="#">news & Events</a></li>
+                    <li><a href="#">School Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Affiliations</h4>
+                <ul>
+                    <li><a href="#">Cambridge Assessment</a></li>
+                    <li><a href="#">Microsoft School</a></li>
+                    <li><a href="#">CENTURY</a></li>
+                    <li><a href="#">Falcon House</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $('.fa-bars').click(function(){
+          $(this).toggleClass('fa-times');
+          $('.navbar').toggleClass('nav-toggle');
+        });
+    
+        $(window).on('scroll load',function(){
+    
+            $('.fa-bars').removeClass('fa-times');
+            $('.navbar').removeClass('nav-toggle');
+    
+            if($(window).scrollTop() > 30){
+            $('header').addClass('header-active');
+            }else{
+                $('header').removeClass('header-active');
+            }
+            
+            $('section').each(function(){
+                var id = $(this).attr('id');
+                var height = $(this).height();
+                var offset = $(this).offset().top - 200;
+                var top = $(window).scrollTop();
+                if(top >= offset && top < offset + height){
+                  $('.navbar ul li a').removeClass('active');
+                  $('.navbar').find('[href="#' + id + '"]').addClass('active');
+                }
+              });
+    
+        });
+    
+    });
+    </script>
+<script src="main.js"></script>
+
+</body>
+</html> 

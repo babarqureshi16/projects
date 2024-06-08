@@ -1,0 +1,38 @@
+Website Category: Soccer League
+
+<--------Intro:--------->
+This is a front end non-ecommerce template built with HTML5, CSS3, JavaScript, and Bootstrap. It includes a landing page.
+
+<--------Pages in Navigation---------->
+Home
+Players
+Schedule
+About
+Shop
+Cart
+
+<--------Folder Structure:---------->
+style1.css/about
+style1.css/cart
+style1.css/contact
+style1.css/player
+style1.css/schedule
+style1.css/shop
+style1.css/style
+style1.css/text
+style1.css/swiper-bundle.min
+
+Fonts
+
+Images
+
+Js/main
+Js/myscript
+Js/schedule
+Js/script
+Js/swiper-bundle.main
+<-------HTML Pages on Root Folder------>
+
+<----------Instructions:--------->
+
+Run the Index.html file from the Folder 
